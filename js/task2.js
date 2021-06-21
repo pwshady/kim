@@ -1,7 +1,7 @@
 'use struct';
 
 var userDialog = document.querySelector('.setup');
-userDialog.classList.remove('hidden');
+//userDialog.classList.remove('hidden');
 
 document.querySelector('.setup-similar').classList.remove('hidden');
 
@@ -81,10 +81,10 @@ var similarWizardTemplate = document.querySelector('#similar-wizard-template').c
 
 var renderWizard = function (wizard) {
     var wizardElement = similarWizardTemplate.cloneNode(true);
-    console.log(wiz2[i].wizard_coat);
+    //console.log(wiz2[wizard]);
     wizardElement.querySelector('.setup-similar-label').textContent = createName();
-    wizardElement.querySelector('.wizard-coat').style.fill = wiz2[i].wizard_coat;
-    wizardElement.querySelector('.wizard-eyes').style.fill = wiz2[i].wizard_eyes;
+    wizardElement.querySelector('.wizard-coat').style.fill = wiz2[wizard].wizard_coat;
+    wizardElement.querySelector('.wizard-eyes').style.fill = wiz2[wizard].wizard_eyes;
     return wizardElement;
 };
   
