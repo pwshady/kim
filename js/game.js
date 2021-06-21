@@ -1,5 +1,6 @@
 'use strict';
 include("task1.js");
+include("task2.js");
 
 function include(url) {
   var script = document.createElement('script');

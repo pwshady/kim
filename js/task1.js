@@ -29,19 +29,22 @@ var getMaxElement = function(arr) {
 
 window.renderStatistics = function(ctx, players, times) {
   renderCloud(ctx, CLOUD_X + GAP, CLOUD_Y + GAP, 'rgba(0, 0, 0, 0.3)');
-  renderCloud(ctx, CLOUD_X, CLOUD_Y, '#fff');
+  renderCloud(ctx, CLOUD_X, CLOUD_Y, '#f0f');
   
   ctx.fillStyle = '#000';
   
   var maxTime = getMaxElement(times);
   console.log(maxTime);
   for (var i = 0; i < players.length; i++) {
-    console.log(times[i]);
+    console.log(document.children,1);
   }
-
-
   
   for (var i = 0; i < players.length; i++) {
+    if (i==1) {
+    ctx.fillStyle = "#000";}
+    else {
+      ctx.fillStyle = "#ff0";
+    }
     ctx.fillText(players[i], CLOUD_X + GAP, CLOUD_Y + GAP + FONT_GAP + (GAP + BAR_HEIGHT) * i);
     ctx.fillRect(CLOUD_X + GAP + TEXT_WIDTH, CLOUD_Y + GAP + (GAP + BAR_HEIGHT) * i, (barWidth * times[i]) / maxTime, BAR_HEIGHT);
   }
