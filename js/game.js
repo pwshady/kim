@@ -1,14 +1,4 @@
 'use strict';
-include("task1.js");
-include("task2.js");
-include("task3.js");
-include("task4.js");
-
-function include(url) {
-  var script = document.createElement('script');
-  script.src = url;
-  //document.getElementsByTagName('head')[0].appendChild(script);
-}
 
 window.GameConstants = {
   Fireball: {
@@ -832,4 +822,7 @@ window.Game = (function () {
   window.restartGame('img/wizard.gif', 'img/wizard-reversed.gif');
 
   return game;
+
+
+  //
 })();
