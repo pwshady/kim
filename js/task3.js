@@ -25,11 +25,13 @@ var onPopupEscPress = function(evt) {
 var openPopup = function() {
   setup.classList.remove('hidden');
   document.addEventListener('keydown', onPopupEscPress);
+  console.log('\uD83D\uDC2D');
 };
 
 var closePopup = function() {
   setup.classList.add('hidden');
   document.removeEventListener('keydown', onPopupEscPress);
+  console.log('\uD83D\uDC38');
 };
 
 var submitDate = function() {

@@ -2,6 +2,7 @@
 include("task1.js");
 include("task2.js");
 include("task3.js");
+include("task4.js");
 
 function include(url) {
   var script = document.createElement('script');
@@ -832,4 +833,3 @@ window.Game = (function () {
 
   return game;
 })();
-
